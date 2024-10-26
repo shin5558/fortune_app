@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>占いアプリ</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <!-- python fortune_app.py --port 5000 -->
+    <h1>占いアプリへようこそ</h1>
+    <form action="/fortune" method="post">
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="gender">性別:</label>
+        <input type="radio" id="male" name="gender" value="男性" required>男性
+        <input type="radio" id="female" name="gender" value="女性" required>女性
+        <br>
+        <label for="birthdate">生年月日:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br>
+        <label for="zodiac">星座:</label>
+        <select id="zodiac" name="zodiac">
+            <option value="牡羊座">牡羊座</option>
+            <option value="牡牛座">牡牛座</option>
+            <option value="双子座">双子座</option>
+            <option value="蟹座">蟹座</option>
+            <option value="獅子座">獅子座</option>
+            <option value="乙女座">乙女座</option>
+            <option value="天秤座">天秤座</option>
+            <option value="蠍座">蠍座</option>
+            <option value="射手座">射手座</option>
+            <option value="山羊座">山羊座</option>
+            <option value="水瓶座">水瓶座</option>
+            <option value="魚座">魚座</option>
+        </select>
+        <br>
+        <label for="theme">占いテーマ:</label>
+        <select id="theme" name="theme">
+            <option value="恋愛">恋愛</option>
+            <option value="仕事">仕事</option>
+            <option value="健康">健康</option>
+            <option value="金運">金運</option>
+            <option value="人間関係">人間関係</option>
+            <option value="家族">家族</option>
+        </select>
+        <br>
+        <label for="timeframe">時間の選択:</label>
+        <select id="timeframe" name="timeframe">
+            <option value="今週">今週</option>
+            <option value="来月">来月</option>
+            <option value="今年">今年</option>
+        </select>
+        <br>
+        <button type="submit">占ってもらう</button>
+    </form>
+</body>
+</html>
